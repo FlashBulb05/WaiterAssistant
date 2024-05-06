@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Registrazione/Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+<body>
+
+<div class="container col text-center">
+    <img src="images/logoWA.PNG" width="100" height="100" alt="Logo WA"><br><br>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-orange active" id="registerBtn" onclick="mostraRegistra()">Registrazione</button>
+        <button type="button" class="btn btn-orange" id="loginBtn" onclick="mostraLogin()">Login</button>
+    </div>
+</div>
+
+    <div class="container col text-center">
+        <div id="registerForm">
+            <h2>Registrazione</h2>
+            <div id="successMessage" class="successMessage" style="color: white;"></div><br>
+            <form>
+                <div class="form-group">
+                    <label for="regUsername">Nome Utente:</label>
+                    <input type="text" class="form-control" id="regUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password:</label>
+                    <input type="password" class="form-control" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regRuolo">Ruolo:</label>
+                    <select class="form-control" id="regRuolo" required>
+                        <option value="1">Cameriere</option>
+                        <option value="2">Cucina</option>
+                        <option value="3">Pizzeria</option>
+                        <option value="4">Cassiere</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-block btn-orange" onclick="registraUtente()">Registra</button>
+            </form>
+        </div>
+
+        <div id="loginForm" style="display: none;">
+            <h2>Login</h2>
+            <div id="errorMessage" class="errorMessage" style="color: white;"></div><br>
+            <form>
+                <div class="form-group">
+                    <label for="loginUsername">Nome Utente:</label>
+                    <input type="text" class="form-control" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" class="form-control" id="loginPassword" required>
+                </div>
+                <button type="button" class="btn btn-block btn-orange" onclick="loginUtente()">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
